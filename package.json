@@ -24,7 +24,7 @@
     "eslint-plugin-import": "^2.22.1",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^8.0.0",
-    "webpack": "^4.46.0",
+    "webpack": "^5.75.0",
     "webpack-bundle-analyzer": "^4.3.0",
     "webpack-cli": "^4.3.12",
     "webpack-dev-server": "^4.11.1",
