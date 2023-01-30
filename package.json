@@ -19,7 +19,7 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "compression-webpack-plugin": "^6.1.1",
-    "eslint": "^7.17.0",
+    "eslint": "^8.33.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "mini-css-extract-plugin": "^0.4.1",
