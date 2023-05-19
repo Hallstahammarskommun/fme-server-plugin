@@ -13,7 +13,6 @@ Send active layers, map extent, selected destinationformat and optional username
     	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     	<title>Origo exempel</title>
     	<link href="css/style.css" rel="stylesheet">
-    	<link href="plugins/fme.css" rel="stylesheet">
     </head>
     <body>
     <div id="app-wrapper">
