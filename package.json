@@ -4,12 +4,9 @@
   "description": "",
   "main": "fme.js",
   "scripts": {
-    "start": "npm run prebuild-sass | run-p watch-js watch-sass",
+    "start": "npm run watch-js",
     "watch-js": "webpack-dev-server --config ./tasks/webpack.dev.js --mode development",
-    "watch-sass": "node-sass -w --include-path scss scss/fme-server-plugin.scss ../origo/plugins/fme.css",
-    "prebuild-sass": "node-sass --include-path scss scss/fme-server-plugin.scss ../origo/plugins/fme.css",
-    "build": "webpack --config ./tasks/webpack.prod.js && npm run build-sass",
-    "build-sass": "node-sass --include-path scss scss/fme-server-plugin.scss build/css/fme.css"
+    "build": "webpack --config ./tasks/webpack.prod.js"
   },
   "author": "Jonas Lundgren",
   "license": "MIT",
@@ -17,13 +14,10 @@
     "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
     "compression-webpack-plugin": "^10.0.0",
     "eslint": "^8.37.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "mini-css-extract-plugin": "^2.7.5",
-    "node-sass": "^8.0.0",
     "webpack": "^5.77.0",
     "webpack-bundle-analyzer": "^4.8.0",
     "webpack-cli": "^5.0.1",

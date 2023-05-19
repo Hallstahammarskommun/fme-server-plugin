@@ -12,7 +12,8 @@ module.exports = {
   },
   externals: ['Origo'],
   resolve: {
-    extensions: ['*', '.js', '.scss']
+    /* extensions: ['*', '.js', '.scss'] */
+    extensions: ['*', '.js']
   },
   plugins: [
     new webpack.ProvidePlugin({

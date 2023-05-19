@@ -35,7 +35,7 @@ const fme = function fme(options = {}) {
         layerNames += `${el.get('name')};`;
       }
     });
-    layerNames = layerNames.split(";").join("%20");
+    layerNames = layerNames.split(';').join('%20');
     return layerNames;
   }
 
@@ -73,6 +73,15 @@ const fme = function fme(options = {}) {
     window.open(fmeUrl, '_self');
   }
 
+  function styleFMEList() {
+    const fmeListDiv = document.querySelector('#fme-list');
+    const fmeList = fmeListDiv.querySelectorAll('li');
+    fmeList.forEach((e) => {
+      e.style.listStyle = 'disc';
+      e.style.margin = 'auto';
+    });
+  }
+
   return Origo.ui.Component({
     name: 'fme',
     onInit() {
@@ -97,6 +106,7 @@ const fme = function fme(options = {}) {
           });
           this.addComponent(modal);
           if (layerTitle) {
+            styleFMEList();
             appendDropdownFormat();
 
             document.querySelector('#input-DestinationFormat').addEventListener('change', () => {

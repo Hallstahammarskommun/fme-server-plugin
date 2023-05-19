@@ -1,7 +1,6 @@
-const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
+/* const MiniCssExtractPlugin = require('mini-css-extract-plugin'); */
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   optimization: {
@@ -19,8 +18,8 @@ module.exports = merge(common, {
     library: 'FME'
   },
   devtool: false,
-  mode: 'production',
-  module: {
+  mode: 'production'
+  /* module: {
     rules: [{
       test: /\.(sc|c)ss$/,
       use: [{
@@ -44,11 +43,11 @@ module.exports = merge(common, {
       }
       ]
     }]
-  },
-  plugins: [
+  }, */
+  /* plugins: [
     new webpack.optimize.AggressiveMergingPlugin(),
     new MiniCssExtractPlugin({
       filename: '../css/fme.css'
     })
-  ]
+  ] */
 });
