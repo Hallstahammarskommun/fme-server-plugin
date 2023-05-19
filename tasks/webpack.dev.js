@@ -11,21 +11,6 @@ module.exports = merge(common, {
     library: 'FME'
   },
   mode: 'development',
-  /* module: {
-    rules: [{
-      test: /\.scss$/,
-      use: [{
-        loader: 'style-loader'
-      },
-      {
-        loader: 'css-loader'
-      },
-      {
-        loader: 'sass-loader'
-      }
-      ]
-    }]
-  }, */
   devServer: {
     static: './',
     port: 9008,

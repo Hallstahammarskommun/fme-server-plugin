@@ -12,7 +12,6 @@ module.exports = {
   },
   externals: ['Origo'],
   resolve: {
-    /* extensions: ['*', '.js', '.scss'] */
     extensions: ['*', '.js']
   },
   plugins: [
