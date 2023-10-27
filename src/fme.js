@@ -69,6 +69,8 @@ const fme = function fme(options = {}) {
     let fmeUrl = options.url + format + layerName + extent;
     if (options.username) {
       fmeUrl += `&username=${localStorage.getItem('username')}`;
+    } else {
+      fmeUrl += '&username= null';
     }
     window.open(fmeUrl, '_self');
   }
