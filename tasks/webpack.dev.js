@@ -6,9 +6,11 @@ module.exports = merge(common, {
     path: `${__dirname}/../../origo/plugins`,
     publicPath: '/build/js',
     filename: 'fme.js',
-    libraryTarget: 'var',
-    libraryExport: 'default',
-    library: 'FME'
+    library: {
+      name: 'FME',
+      type: 'var',
+      export: 'default'
+    }
   },
   mode: 'development',
   devServer: {

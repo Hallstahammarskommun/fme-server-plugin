@@ -12,9 +12,11 @@ module.exports = merge(common, {
   output: {
     path: `${__dirname}/../build/js`,
     filename: 'fme.min.js',
-    libraryTarget: 'var',
-    libraryExport: 'default',
-    library: 'FME'
+    library: {
+      name: 'FME',
+      type: 'var',
+      export: 'default'
+    }
   },
   devtool: false,
   mode: 'production'
