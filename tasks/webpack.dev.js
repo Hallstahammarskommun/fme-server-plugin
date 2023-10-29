@@ -1,11 +1,13 @@
+const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
   output: {
-    path: `${__dirname}/../../origo/plugins`,
+    path: path.resolve(__dirname, '../../origo/plugins'),
     publicPath: '/build/js',
     filename: 'fme.js',
+    clean: true,
     library: {
       name: 'FME',
       type: 'var',

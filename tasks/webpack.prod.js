@@ -1,3 +1,4 @@
+const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
@@ -10,8 +11,10 @@ module.exports = merge(common, {
     hints: false
   },
   output: {
-    path: `${__dirname}/../build/js`,
+    path: path.resolve(__dirname, '../build/js'),
     filename: 'fme.min.js',
+    compareBeforeEmit: false,
+    clean: true,
     library: {
       name: 'FME',
       type: 'var',
